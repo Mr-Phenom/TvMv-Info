@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1B1B"
+    tools:context=".activity.MainActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/tvmv_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@drawable/tvmv_logo"
+                tools:srcCompat="@drawable/tvmv_logo" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="95dp"
+                android:fontFamily="cursive"
+                android:text="Movies \u0026 TV Show Info"
+                android:textColor="#FFFEFE"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.483" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextSearchHome"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edite_text_border"
+            android:cursorVisible="true"
+            android:gravity="center"
+            android:hint="Search Movie, TV Show"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#C9FFFFFF"
+            android:textCursorDrawable="@drawable/cursor_edittext"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSearchHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarHome" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSearchHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/search_icon"
+            android:backgroundTint="#FFFEFE"
+            android:textColor="#FFFFFF"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextSearchHome"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarHome">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearchHome">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#1A1919"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:text="Now Playing"
+                    android:textColor="#FBFAFA"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewNowPlayingClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/click_for_more"
+                    android:textColor="#A4B1F9"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNowPlaying"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:paddingBottom="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1A1919"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:text="Up Coming"
+                    android:textColor="#FBFAFA"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewUpComingClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/click_for_more"
+                    android:textColor="#A4B1F9"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewUpComing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:paddingBottom="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1A1919"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:text="Top Rated"
+                    android:textColor="#FBFAFA"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewTopRatedClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/click_for_more"
+                    android:textColor="#A4B1F9"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTopRated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:paddingBottom="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1A1919"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:text="Popular"
+                    android:textColor="#FBFAFA"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewPopularClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/click_for_more"
+                    android:textColor="#A4B1F9"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPopular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:paddingBottom="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

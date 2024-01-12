@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141111"
+    android:orientation="vertical"
+    tools:context=".activity.ClickMoreActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarClickMore"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp">
+
+
+            <ImageView
+
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/tvmv_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@drawable/tvmv_logo"
+                tools:srcCompat="@drawable/tvmv_logo" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="95dp"
+                android:fontFamily="cursive"
+                android:text="Movies \u0026 TV Show Info"
+                android:textColor="#FFFEFE"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.483" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+
+        android:id="@+id/textViewCategoryClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="95dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="NONE"
+        android:textColor="#FFFEFE"
+        android:textSize="22sp" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutClickMore"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#131212"
+        app:tabIndicatorColor="#FFFCFC"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabTextColor="#FFFFFF" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2ClickMore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

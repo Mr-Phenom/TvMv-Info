@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1B1B"
+    android:orientation="vertical"
+    tools:context=".activity.SearchActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSearch"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp">
+
+
+            <ImageView
+
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/tvmv_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@drawable/tvmv_logo"
+                tools:srcCompat="@drawable/tvmv_logo" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="95dp"
+                android:fontFamily="cursive"
+                android:text="Movies \u0026 TV Show Info"
+                android:textColor="#FFFEFE"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.483" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextSearchSearch"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edite_text_border"
+            android:gravity="center"
+            android:hint="Search Movie, TV Show"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#C9FFFFFF"
+            android:textCursorDrawable="@drawable/cursor_edittext"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSearchHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarHome" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSearchSearch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/search_icon"
+            android:backgroundTint="#FFFEFE"
+            android:textColor="#FFFFFF"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextSearchHome"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarHome">
+
+        </androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#131212"
+        app:tabIndicatorColor="#FFFCFC"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabTextColor="#FFFFFF" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2Search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
