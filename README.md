@@ -48,9 +48,8 @@ Feel free to contribute to the project by opening issues or submitting pull requ
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
 
-## Screenshots:
+## Screenshots
 
 ![Screenshot_2024-01-06-18-32-21-72_514cd99807a20d4d83e23cdb501f9724](https://github.com/Mr-Phenom/TvMv-Info/assets/140901874/611869ed-67c1-444b-8fbf-0085364a3e33)
 
@@ -59,4 +58,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ![Screenshot_2024-01-06-18-31-43-64_514cd99807a20d4d83e23cdb501f9724](https://github.com/Mr-Phenom/TvMv-Info/assets/140901874/8b797aa4-4b72-495f-9ce3-c9f04d28e448)
 
 ![Screenshot_2024-01-06-18-32-03-41_514cd99807a20d4d83e23cdb501f9724](https://github.com/Mr-Phenom/TvMv-Info/assets/140901874/40c638da-e366-4178-86c4-d0dacd89acfc)
+```
 
